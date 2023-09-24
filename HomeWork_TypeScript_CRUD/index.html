@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Person</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <h1>CRUD Person</h1>
+   
+    <div class="container">
+        <div class="createPerson">
+    <h2>Create Person</h2>
+    <form id="createPersonForm">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <button type="submit" >Create</button>
+    </form>
+</div>
+
+<div class="readPerson">
+    <h2>Read from Person</h2>
+  <form id="readPersonForm">
+    <label for="readId">ID:</label>
+    <input type="number" id="readId" required><br><br>
+
+    <button type="submit">Read</button>
+  </form>
+</div>
+
+<div class="updatePerson">
+  <h2>Update Person</h2>
+  <form id="updatePersonForm">
+    <label for="updateId">ID:</label>
+    <input type="number" id="updateId" required><br><br>
+    <label for="updateName">Name:</label>
+    <input type="text" id="updateName" required><br><br>
+    <label for="updateAge">Age:</label>
+    <input type="number" id="updateAge" required><br><br>
+    <button type="submit">Update</button>
+  </form>
+</div>
+
+<div class="deletePerson">
+    <h2>Delete Person</h2>
+    <form id="deletePersonForm">
+        <label for="deleteId">ID:</label>
+        <input type="number" id="deleteId" required><br><br>
+        <button type="submit">Delete</button>
+    </form>
+</div>
+
+</div>
+
+    <h2>Table Person</h2>
+    <table id="personTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="personTableBody">
+
+        </tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+</html>

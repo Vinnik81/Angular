@@ -1,0 +1,14 @@
+h1 {
+    color: blue;
+}
+
+h3 {
+    border: 5px solid black;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+    cursor: pointer;
+    user-select: none;
+}

@@ -1,0 +1,21 @@
+<!-- <h1>Hello world!</h1>
+<h2>{{ title }}</h2>
+<p>{{title.length}}</p>
+<p>{{title.toLowerCase()}}</p>
+<p>{{title.toUpperCase()}}</p>
+<h1 title="{{helperText}}">Vladimir</h1>
+<h1 [title]="helperText">Vladimir2</h1>
+<h3 (click)="onButtonClick()">Click</h3> -->
+
+<hr>
+<p *ngIf="isAdmin">Hello admin</p>
+
+<div [ngSwitch]="currentColor">
+  <p *ngSwitchCase="Color.Red" style="background-color: red;">Red</p>
+  <p *ngSwitchCase="Color.Green" style="background-color: green;">green</p>
+  <p *ngSwitchCase="Color.Blue" style="background-color: blue;">Blue</p>
+</div>
+
+<ul>
+  <li *ngFor="let item of products; let i = index">{{i+1}} {{item}}</li>
+</ul>
