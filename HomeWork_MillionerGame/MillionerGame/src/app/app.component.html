@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Кто хочет стать миллионером?</h1>
+  <div *ngIf="!gameOver" class="question">
+    <h2>Вопрос {{currentQuestionIndex + 1}}</h2>
+    <h3>{{questions[currentQuestionIndex].question}}</h3>
+    <ul class="flex-container">
+      <li *ngFor="let answer of questions[currentQuestionIndex].answers; let i = index" [class.odd]="i % 2 != 0">
+        <button (click)="chooseAnswer(i)">{{answer}}</button>
+      </li>
+    </ul>
+    <h3>{{result}}</h3>
+    <p>Cумма выиграша: {{winnings}}</p>
+    <button id="endGame" (click)="endGame()">Закончить игру</button>
+  </div>
+  <div *ngIf="gameOver">
+    <h1 *ngIf="pobeda">{{pobeda}}</h1>
+    <button id="startGame" (click)="startGame()">Начать игру</button>
+  </div>
+</div>
