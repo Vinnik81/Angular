@@ -1,16 +1,29 @@
 <div class="container">
   <h1>Кто хочет стать миллионером?</h1>
+  <ul id="winnings">
+    <li [style.background-color]="winnings == 5 ? 'red' : 'white'">1000000 рублей</li>
+    <li [style.background-color]="winnings == 4 ? 'red' : 'white'">500000 рублей</li>
+    <li [style.background-color]="winnings == 3 ? 'red' : 'white'">100000 рублей</li>
+    <li [style.background-color]="winnings == 2 ? 'red' : 'white'">50000 рублей</li>
+    <li [style.background-color]="winnings == 1 ? 'red' : 'white'">5000 рублей</li>
+  </ul>
   <div *ngIf="!gameOver" class="question">
     <h2>Вопрос {{currentQuestionIndex + 1}}</h2>
     <h3>{{questions[currentQuestionIndex].question}}</h3>
     <ul class="flex-container">
       <li *ngFor="let answer of questions[currentQuestionIndex].answers; let i = index" [class.odd]="i % 2 != 0">
-        <button (click)="chooseAnswer(i)">{{answer}}</button>
+        <button id="answer" (click)="chooseAnswer(i)">{{answer}}</button>
       </li>
     </ul>
     <h3>{{result}}</h3>
-    <p>Cумма выиграша: {{winnings}}</p>
-    <button id="endGame" (click)="endGame()">Закончить игру</button>
+    <ul id="winnings" [ngSwitch]="winnings">
+      <li *ngSwitchCase="5" [class.active]="winnings == 5">1000000 рублей</li>
+      <li *ngSwitchCase="4" [class.active]="winnings == 4">500000 рублей</li>
+      <li *ngSwitchCase="3" [class.active]="winnings == 3">100000 рублей</li>
+      <li *ngSwitchCase="2" [class.active]="winnings == 2">50000 рублей</li>
+      <li *ngSwitchCase="1" [class.active]="winnings == 1">5000 рублей</li>
+    </ul>
+    <button id="endGame" (click)="endGame()">Забрать деньги</button>
   </div>
   <div *ngIf="gameOver">
     <h1 *ngIf="pobeda">{{pobeda}}</h1>

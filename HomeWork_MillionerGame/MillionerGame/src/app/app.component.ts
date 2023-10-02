@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 interface Question {
   question: string;
@@ -46,29 +46,55 @@ export class AppComponent {
   winnings: number = 0;
   gameOver: boolean = false;
   result: string = '';
-  //text: string = 'Поздравляем! Вы выиграли ';
+  isButtonClicked: boolean = false;
+  styles: any = {
+    'background-color': '#ffffff'
+  }
   pobeda: string = '';
+  timer: any;
 
   chooseAnswer(answerIndex: number) {
-    if (answerIndex === this.questions[this.currentQuestionIndex].correctAnswerIndex) {
-      this.winnings += 1000;
-      this.result = 'Верно!';
-      if (this.currentQuestionIndex === this.questions.length - 1) {
-        this.endGame();
+      if (answerIndex === this.questions[this.currentQuestionIndex].correctAnswerIndex) {
+        this.winnings++;
+        this.result = 'Верно!';
+        if (this.currentQuestionIndex === this.questions.length - 1) {
+          this.endGame();
+        }
+        else {
+          this.currentQuestionIndex++;
+        }
       }
       else {
-        this.currentQuestionIndex++;
+        this.result = 'Неверно!';
+        this.gameOver = true;
       }
     }
-    else {
-      this.result = 'Неверно!';
-      this.gameOver = true;
-    }
-  }
 
   endGame() {
     this.gameOver = true;
-    this.pobeda = 'Поздравляем! Вы выиграли ' + this.winnings;
+    this.pobeda = 'Поздравляем! Вы ответили правильно на ' + this.winnings + ' вопросов из ' + this.questions.length;
+    switch (this.winnings) {
+      case 1: {
+        this.pobeda += ' Вы выиграли 5000 рублей!';
+        break;
+      }
+      case 2: {
+        this.pobeda += ' Вы выиграли 50000 рублей!';
+        break;
+      }
+      case 3: {
+        this.pobeda += ' Вы выиграли 100000 рублей!';
+        break;
+      }
+      case 4: {
+        this.pobeda += ' Вы выиграли 500000 рублей!';
+        break;
+      }
+      case 5: {
+        this.pobeda += ' Вы стали миллионером!';
+        break;
+      }
+    }
   }
   startGame() {
     this.gameOver = false;
