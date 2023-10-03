@@ -1,0 +1,16 @@
+<!-- <h1>To Do List</h1>
+<input type="text" required [(ngModel)]="text" (keydown.enter)="addTask()">
+<ul>
+    <li *ngFor="let item of tasks">{{item}}</li>
+</ul> -->
+
+<h1>To Do List</h1>
+<form (submit)="addTask()">
+    <input type="text" name="text" required [(ngModel)]="text">
+    <button>Add</button>
+</form>
+
+<ul>
+    <li *ngFor="let item of tasks"><button (click)="removeTask(item.id)">❌</button>
+        {{item.title}} {{item.id}}</li>
+</ul>

@@ -1,0 +1,11 @@
+<h1>{{operator}}</h1>
+
+<input [(ngModel)]="num1" type="number">
+<select [(ngModel)]="operator">
+    <option *ngFor="let item of operations">{{item}}</option>
+</select>
+<input [(ngModel)]="num2" type="number">
+<span>=</span>
+<span>{{result}}</span>
+<br><br>
+<!-- <button (click)="onCalc()">Calculate</button> -->
