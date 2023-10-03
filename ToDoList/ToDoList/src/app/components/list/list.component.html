@@ -1,0 +1,18 @@
+<h1>To Do List</h1>
+
+<app-form (added)="addTask($event)"></app-form>
+<ul>
+    <app-item (removed)="removeTask(task)" [item]="task" *ngFor="let task of taskRepository.tasks"> </app-item>
+</ul>
+
+
+<!-- <h1>To Do List</h1>
+<form (submit)="addTask()">
+    <input type="text" name="text" required [(ngModel)]="text">
+    <button>Add</button>
+</form>
+
+<ul>
+    <li *ngFor="let item of tasks"><button (click)="removeTask(item.id)">❌</button>
+        {{item.title}} {{item.id}}</li>
+</ul> -->
