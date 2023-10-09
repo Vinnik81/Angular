@@ -1,0 +1,30 @@
+.container {
+    margin: 0 auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .example-card {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    margin-right: 10px;
+  }
+  
+  .button {
+    margin-right: 5px;
+  }
+
+  #addProduct {
+    background-color: rgb(77, 76, 76);
+  }
+  
+  img.image {
+    max-width: 300px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  

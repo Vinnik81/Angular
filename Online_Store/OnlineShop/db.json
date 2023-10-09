@@ -1,0 +1,59 @@
+{
+  "products": [
+    {
+      "id": 4,
+      "title": "Dexp Atlas H403",
+      "price": "33499",
+      "year": "2022",
+      "image": "assets/images/DexpComp.jpg",
+      "configure": {
+        "chip": "AMD Ryzen 7 5700G",
+        "ssd": "512 GB",
+        "memory": "16 GB",
+        "display": ""
+      }
+    },
+    {
+      "id": 5,
+      "title": "MackBook",
+      "price": "50000",
+      "year": "2022",
+      "image": "assets/images/NoImage.jpg",
+      "configure": {
+        "chip": "M1",
+        "ssd": "256 GB",
+        "memory": "8 GB",
+        "display": "Apple"
+      }
+    },
+    {
+      "id": 6,
+      "title": "MackBook Pro",
+      "price": "200000",
+      "year": "2023",
+      "image": "assets/images/macbook.jpeg",
+      "configure": {
+        "chip": "M2",
+        "ssd": "1 TB",
+        "memory": "32 GB",
+        "display": "Apple"
+      }
+    }
+  ],
+  "basket": [
+    {
+      "id": 4,
+      "title": "Dexp Atlas H403",
+      "price": "33499",
+      "year": "2022",
+      "image": "assets/images/DexpComp.jpg",
+      "configure": {
+        "chip": "AMD Ryzen 7 5700G",
+        "ssd": "512 GB",
+        "memory": "16 GB",
+        "display": ""
+      },
+      "quantity": 5
+    }
+  ]
+}
