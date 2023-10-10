@@ -1,0 +1,83 @@
+div.body {
+background-image: url("../../../../src/assets/images/StoresFon.png");
+background-repeat: repeat-x; 
+background-size: auto;
+background-position: center; 
+}
+
+h1 {
+  padding: 10px;
+  text-align: center;
+  font-size: 50px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+width: 1200px;
+    margin: 0 auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .example-card {
+    background-color: darkgray;
+    color: black;
+    margin-right: 10px;
+  }
+  
+  img.image {
+    max-width: 300px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-stretched-tabs {
+    max-width: 800px;
+  }
+
+  mat-tab.example-tab {
+    background-color: darkgray;
+  }
+
+  .example-small-box, .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: darkgray;
+  }
+  
+  .example-small-box {
+    height: 100px;
+    width: 110px;
+  }
+  
+  .example-large-box {
+    height: 300px;
+    width: 300px;
+  }
+  
+
+
