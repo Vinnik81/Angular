@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { IProducts } from 'src/app/models/products';
@@ -10,7 +10,7 @@ import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit, OnDestroy {
   products: IProducts[];
   productsSubscription: Subscription;
   canEdit:boolean = false;
